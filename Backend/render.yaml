@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: skillloop-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    fromDatabase:
+      name: skillloop-db
+      property: connectionString
+
+databases:
+  - name: skillloop-db
+    plan: free
+    databaseName: skillloop
+    user: skillloop_user
+

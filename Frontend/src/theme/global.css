@@ -1,0 +1,50 @@
+/* Global Theme Utilities */
+@import '@ionic/react/css/display.css';
+
+.text-default {
+  color: var(--ion-text-color);
+}
+
+.text-medium {
+  color: var(--ion-color-medium);
+}
+
+.bg-default {
+  background-color: var(--ion-background-color);
+}
+
+.bg-card {
+  background-color: var(--ion-card-background);
+}
+
+/* Custom Header Class */
+ion-toolbar.ion-color-header-custom {
+  --background: var(--ion-toolbar-background);
+  --color: var(--ion-toolbar-color);
+}
+
+/* Dashboard Utilities */
+.gradient-text {
+  background: linear-gradient(to right, var(--ion-color-primary), var(--ion-color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.welcome-card-bg {
+    background: linear-gradient(135deg, var(--ion-color-light-shade), var(--ion-color-light));
+}
+
+body.dark .welcome-card-bg {
+    background: linear-gradient(135deg, var(--ion-color-step-100), var(--ion-color-step-200));
+}
+
+.action-card {
+  transition: transform 0.2s;
+}
+
+.action-card:active {
+  transform: scale(0.98);
+}
